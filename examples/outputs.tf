@@ -1,5 +1,5 @@
 output "virtual_machine_id" {
-  value = module.virtual_machine[*].id
+  value = module.virtual_machine_scale_set[*].id
 }
 
 output "resource_group_name" {
