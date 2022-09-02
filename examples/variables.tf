@@ -127,5 +127,5 @@ variable "resource_network_role" {
 variable "provision_scale_set" {
   description = "Whether to provision a key vault"
   type        = bool
-  default     = false
+  default     = true
 }
