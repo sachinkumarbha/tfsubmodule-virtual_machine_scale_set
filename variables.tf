@@ -66,3 +66,9 @@ variable "instances" {
   type        = string
   default     = 1
 }
+
+variable "ephemeral_disk_enabled" {
+  description = "Whether to use a ephemeral OS disk the provisioned resources"
+  type        = bool
+  default     = false
+}

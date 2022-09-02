@@ -38,7 +38,7 @@ variable "resource_instance_size" {
   type        = map(any)
   default = {
     Test = {
-      "Services" = "Standard_B1s"
+      "Services" = "Standard_D2as_v4"
     }
   }
 }
@@ -126,6 +126,12 @@ variable "resource_network_role" {
 
 variable "provision_scale_set" {
   description = "Whether to provision a key vault"
+  type        = bool
+  default     = true
+}
+
+variable "ephemeral_disk_enabled" {
+  description = "Whether to use a ephemeral OS disk the provisioned resources"
   type        = bool
   default     = true
 }

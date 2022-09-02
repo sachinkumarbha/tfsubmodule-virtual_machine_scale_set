@@ -35,7 +35,9 @@ resource "azurerm_linux_virtual_machine_scale_set" "virtual_machine" {
     storage_account_type = "Standard_LRS"
     disk_size_gb         = var.disk_size_gb
 
-    diff_disk_settings {
+    dynamic "diff_disk_settings" {
+      for_each = var.ephemeral_disk_enabled == true ? [1] : []
+
       option    = "Local"
       placement = "CacheDisk"
     }
