@@ -18,5 +18,5 @@ module "virtual_machine_scale_set" {
   environment               = var.service_environment
 
   # Select the subnet, only a single NIC is supported at this time
-  subnet_id = module.service_network.subnet_id
+  subnet_id = one(module.service_network.subnet_id)
 }
