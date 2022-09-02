@@ -37,9 +37,10 @@ resource "azurerm_windows_virtual_machine_scale_set" "virtual_machine" {
 
     dynamic "diff_disk_settings" {
       for_each = var.ephemeral_disk_enabled == true ? [1] : []
-
-      option    = "Local"
-      placement = "CacheDisk"
+      content {
+        option    = "Local"
+        placement = "CacheDisk"
+      }
     }
   }
 
