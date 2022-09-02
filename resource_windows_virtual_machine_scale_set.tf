@@ -59,10 +59,6 @@ resource "azurerm_windows_virtual_machine_scale_set" "virtual_machine" {
     }
   }
 
-  automatic_instance_repair {
-    enabled = true
-  }
-
   boot_diagnostics {
     storage_account_uri = null
   }
