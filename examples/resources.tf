@@ -8,7 +8,7 @@ module "virtual_machine_scale_set" {
   name                      = local.resource_name
   location                  = module.resource_group.location
   resource_group_name       = module.resource_group.name
-  size                      = var.resource_instance_size
+  size                      = loca.resource_instance_size
   instances                 = var.resource_instance_count
   admin_username            = var.admin_username
   admin_password            = random_password.password[count.index].result
