@@ -69,8 +69,8 @@ resource "azurerm_linux_virtual_machine_scale_set" "virtual_machine" {
 
   lifecycle {
     ignore_changes = [
-      # Ignore changes to instances, as autoscaling will take over
-      instances,
+      # Ignore changes as autoscaling will manage
+      instances, tags,
     ]
   }
 }
