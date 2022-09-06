@@ -16,7 +16,7 @@ resource "azurerm_windows_virtual_machine_scale_set" "virtual_machine" {
 
   # Specify network ID
   network_interface {
-    name    = "example"
+    name    = "${var.name}-ni"
     primary = true
 
     ip_configuration {
